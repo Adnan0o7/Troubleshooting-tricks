@@ -1,0 +1,16 @@
+To find and kill a process >>
+
+On Windows you could use the following steps
+
+  C:\> tasklist // will show the list of running process'
+
+  Image Name        PID Session Name    Session#    Mem Usage
+  System            4   console                 0   236 K
+  ...
+  node.exe         3592 console                0    8440 k
+Note the PID corresponding to your node process, in this case 3592. Next run taskkill to terminate the process.
+
+  C:\> taskkill /F /PID 3592
+Or /IM switch
+
+  C:\> taskkill /F /IM node.exe
